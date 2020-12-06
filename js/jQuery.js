@@ -40,4 +40,13 @@ $(function () {
       $(this).css("opacity", "0.7");
     }
   );
+
+  $(".course-item img").click(function () {
+    $(".course-modal-img").attr("src", `${$(this).attr("src")}`);
+    $(".course-modal-bg, .course-modal-img").fadeIn();
+  });
+
+  $(".course-modal-bg, .course-modal-img").click(function () {
+    $(".course-modal-bg, .course-modal-img").fadeOut();
+  });
 });
