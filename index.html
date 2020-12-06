@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./img/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/jQuery.js" type="text/Javascript"></script>
   </head>
   <body>
     <header>
@@ -17,7 +19,12 @@
         <div class="header-right">
           <ul class="header-list">
             <li class="header-item header-about"><a href="#">デイトラとは</a></li>
-            <li class="header-item header-course"><a href="#">コース一覧</a></li>
+            <li class="header-item header-course">
+              <a href="#" class="header-course-switch">コース一覧</a>
+              <a href="#" class="header-drawer">初級</a>
+              <a href="#" class="header-drawer">中級</a>
+              <a href="#" class="header-drawer">上級</a>
+            </li>
             <li class="header-item header-contact"><a href="#">お問い合わせ</a></li>
           </ul>
         </div>

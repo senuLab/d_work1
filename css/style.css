@@ -63,12 +63,24 @@ header {
   opacity: 0.7;
 }
 
-.header-course:hover {
+.header-course {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .header-course:hover {
+  opacity: 0.7;
+}*/
+
+.header-course-switch:hover {
   opacity: 0.7;
 }
 
-.header-contact:hover {
-  opacity: 0.7;
+.header-drawer {
+  display: none;
+  border: 2px solid rgb(66, 64, 64);
+  border-radius: 30px;
+  margin-top: 5px;
 }
 
 /*------------------------------
