@@ -5,7 +5,7 @@ $(function () {
       $(".header-drawer").slideUp();
       $(this).removeClass("drawer-show");
     } else {
-      $(this).css("color", "red");
+      $(this).css("color", "#ec6d64");
       $(".header-drawer").slideDown();
       $(this).addClass("drawer-show");
     }
@@ -13,12 +13,31 @@ $(function () {
 
   $(".header-drawer").hover(
     function () {
-      $(this).css("color", "red").css("border-color", "red");
-      $(this).css("opacity", "0.7");
+      $(this).css("background-color", "#ec6d64");
     },
     function () {
-      $(this).css("color", "black").css("border-color", "black");
-      $(this).css("opacity", "1");
+      $(this).css("background-color", "white");
+    }
+  );
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 80) {
+      $(".scroll-btn").fadeIn();
+    } else if ($(window).scrollTop() <= 79) {
+      $(".scroll-btn").fadeOut();
+    }
+  });
+
+  $(".scroll-btn").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "0.5s");
+  });
+
+  $(".scroll-btn").hover(
+    function () {
+      $(this).css("opacity", "1.0");
+    },
+    function () {
+      $(this).css("opacity", "0.7");
     }
   );
 });
