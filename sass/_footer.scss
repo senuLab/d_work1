@@ -1,0 +1,18 @@
+/* @import "./config/valuable"; */
+/*------------------------------
+footer
+------------------------------*/
+footer {
+  background-color: #082b48;
+  color: white;
+  padding: 25px 0;
+}
+.copyright {
+  float: right;
+  font-size: 12px;
+
+  @include mq(sm) {
+    float: none;
+    font-size: 10px;
+  }
+}

@@ -1,3 +1,4 @@
+/* @import "./config/valuable"; */
 /*------------------------------
 common
 ------------------------------*/
@@ -27,6 +28,12 @@ h2 {
   display: block;
 }
 
+@media screen and (max-width: 767px) {
+  .clear::after {
+    content: none;
+  }
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -37,6 +44,7 @@ img {
   width: 100%;
 }
 
+/* @import "./config/valuable"; */
 /*------------------------------
 header
 ------------------------------*/
@@ -45,44 +53,80 @@ header {
   padding: 20px 0;
 }
 
-.header-left {
+header .header-left {
   float: left;
   font-size: 25px;
 }
 
-.header-right {
+@media screen and (max-width: 767px) {
+  header .header-left {
+    float: none;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+}
+
+header .header-right {
   float: right;
 }
 
-.header-item {
+@media screen and (max-width: 767px) {
+  header .header-right {
+    float: none;
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .header-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+header .header-item {
   float: left;
   margin-left: 40px;
 }
 
-.header-about:hover {
+@media screen and (max-width: 767px) {
+  header .header-item {
+    float: none;
+    margin: 0;
+  }
+}
+
+header .header-about:hover {
   opacity: 0.7;
 }
 
-.header-course {
+header .header-course {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
-/* .header-course:hover {
-  opacity: 0.7;
-}*/
-
-.header-course-switch:hover {
+header .header-course-switch:hover {
   opacity: 0.7;
 }
 
-.header-drawer {
+header .header-drawer {
   display: none;
-  border: 2px solid rgb(66, 64, 64);
+  border: 2px solid #424040;
   border-radius: 30px;
   margin-top: 5px;
 }
 
+/* @import "./config/valuable"; */
 /*------------------------------
 top
 ------------------------------*/
@@ -93,38 +137,59 @@ top
   padding: 80px 0;
 }
 
-.scroll-btn {
+@media screen and (max-width: 767px) {
+  .top {
+    padding: 100px 0;
+  }
+}
+
+.top .scroll-btn {
   display: none;
   position: fixed;
   right: 10px;
   bottom: 30px;
   z-index: 999;
-  border: 2px solid rgb(66, 64, 64);
+  border: 2px solid #424040;
   background-color: #ec6d64;
   border-radius: 5px;
   padding: 3px 3px 3px 4px;
   opacity: 0.7;
 }
 
-.scroll-top {
+.top .scroll-top {
   display: block;
   height: 100%;
   font-size: 15px;
 }
 
-.top-title {
+.top .top-title {
   font-size: 50px;
   margin-bottom: 20px;
   line-height: 70px;
 }
 
-.top-message {
+@media screen and (max-width: 767px) {
+  .top .top-title {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+.top .top-message {
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
   font-weight: normal;
 }
 
+@media screen and (max-width: 767px) {
+  .top .top-message {
+    font-size: 13px;
+    line-height: 25px;
+  }
+}
+
+/* @import "./config/valuable"; */
 /*------------------------------
 about
 ------------------------------*/
@@ -134,14 +199,41 @@ about
   font-size: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .about-title {
+    padding-bottom: 20px;
+    font-size: 25px;
+  }
+}
+
 .about-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .about-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
 }
 
 .about-item img {
   width: 49%;
   height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .about-item img {
+    width: 100%;
+  }
 }
 
 .about-item p {
@@ -151,6 +243,16 @@ about
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .about-item p {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+/* @import "./config/valuable"; */
 /*------------------------------
 course
 ------------------------------*/
@@ -159,31 +261,60 @@ course
   margin-top: 40px;
   padding: 40px 0 90px;
 }
-.course-title {
+
+.course .course-title {
   padding-top: 30px;
   padding-bottom: 20px;
   font-size: 30px;
 }
 
-.course-list {
+@media screen and (max-width: 767px) {
+  .course .course-title {
+    font-size: 25px;
+  }
+}
+
+.course .course-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.course-item {
+@media screen and (max-width: 767px) {
+  .course .course-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.course .course-item {
   width: 30%;
 }
 
-.course-item p {
+@media screen and (max-width: 767px) {
+  .course .course-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.course .course-item p {
   margin-top: 10px;
 }
 
-.course-modal-img {
+.course .course-modal-img {
   width: 95%;
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1001;
   display: none;
@@ -200,22 +331,31 @@ course
   display: none;
 }
 
+/* @import "./config/valuable"; */
 /*------------------------------
 contact
 ------------------------------*/
 .contact {
   padding-bottom: 20px;
 }
-.contact-title {
+
+.contact .contact-title {
   padding-top: 70px;
   padding-bottom: 20px;
   font-size: 30px;
 }
-.contact-message {
+
+@media screen and (max-width: 767px) {
+  .contact .contact-title {
+    font-size: 25px;
+  }
+}
+
+.contact .contact-message {
   padding-bottom: 20px;
 }
 
-input[type="email"] {
+.contact input[type="email"] {
   width: 80%;
   border-radius: 999px;
   border: 3px solid #d8d8d8;
@@ -225,7 +365,14 @@ input[type="email"] {
   outline: none;
 }
 
-.start {
+@media screen and (max-width: 767px) {
+  .contact input[type="email"] {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.contact .start {
   background-color: #ec6d64;
   border-radius: 5px;
   padding: 20px 50px;
@@ -236,10 +383,12 @@ input[type="email"] {
   border: 1px solid black;
 }
 
-.start:hover {
+.contact .start:hover {
   opacity: 0.7;
   cursor: pointer;
 }
+
+/* @import "./config/valuable"; */
 /*------------------------------
 footer
 ------------------------------*/
@@ -248,120 +397,13 @@ footer {
   color: white;
   padding: 25px 0;
 }
+
 .copyright {
   float: right;
   font-size: 12px;
 }
 
-/*------------------------------
-responsive
-------------------------------*/
-@media only screen and (max-width: 767px) {
-  /*------------------------------
-  common
-  ------------------------------*/
-  .clear::after {
-    content: none;
-  }
-
-  /*------------------------------
-  header
-  ------------------------------*/
-  .header-left {
-    float: none;
-    margin-bottom: 10px;
-    font-size: 25px;
-  }
-
-  .header-right {
-    float: none;
-    width: 100%;
-    font-size: 15px;
-  }
-
-  .header-list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header-item {
-    float: none;
-    margin: 0;
-  }
-
-  /*------------------------------
-  top
-  ------------------------------*/
-  .top {
-    padding: 100px 0;
-  }
-
-  .top-title {
-    font-size: 30px;
-    line-height: 45px;
-  }
-
-  .top-message {
-    font-size: 13px;
-    line-height: 25px;
-  }
-
-  /*------------------------------
-  about
-  ------------------------------*/
-  .about-title {
-    padding-bottom: 20px;
-    font-size: 25px;
-  }
-
-  .about-item {
-    flex-direction: column;
-    margin-bottom: 80px;
-  }
-
-  .about-item img {
-    width: 100%;
-  }
-
-  .about-item p {
-    margin-top: 10px;
-    width: 100%;
-    font-size: 13px;
-    line-height: 20px;
-  }
-
-  /*------------------------------
-  course
-  ------------------------------*/
-
-  .course-title {
-    font-size: 25px;
-  }
-
-  .course-list {
-    flex-direction: column;
-  }
-
-  .course-item {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  /*------------------------------
-  contact
-  ------------------------------*/
-  .contact-title {
-    font-size: 25px;
-  }
-
-  input[type="email"] {
-    width: 100%;
-    padding: 15px;
-  }
-
-  /*------------------------------
-  footer
-  ------------------------------*/
+@media screen and (max-width: 767px) {
   .copyright {
     float: none;
     font-size: 10px;

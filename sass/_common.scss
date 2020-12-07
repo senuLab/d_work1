@@ -1,0 +1,44 @@
+/* @import "./config/valuable"; */
+
+/*------------------------------
+common
+------------------------------*/
+body {
+  color: #082b48;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+
+  @include mq(sm) {
+    content: none;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}

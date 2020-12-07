@@ -43,10 +43,13 @@ $(function () {
 
   $(".course-item img").click(function () {
     $(".course-modal-img").attr("src", `${$(this).attr("src")}`);
+    console.log($(".course-modal-img").attr("display"));
     $(".course-modal-bg, .course-modal-img").fadeIn();
   });
 
   $(".course-modal-bg, .course-modal-img").click(function () {
-    $(".course-modal-bg, .course-modal-img").fadeOut();
+    if ($(".course-modal-bg").css("display") === "block") {
+      $(".course-modal-bg, .course-modal-img").fadeOut();
+    }
   });
 });
