@@ -1,4 +1,3 @@
-/* @import "./config/valuable"; */
 /*------------------------------
 top
 ------------------------------*/
@@ -12,26 +11,7 @@ top
     padding: 100px 0;
   }
 
-  .scroll-btn {
-    display: none;
-    position: fixed;
-    right: 10px;
-    bottom: 30px;
-    z-index: 999;
-    border: 2px solid rgb(66, 64, 64);
-    background-color: #ec6d64;
-    border-radius: 5px;
-    padding: 3px 3px 3px 4px;
-    opacity: 0.7;
-  }
-
-  .scroll-top {
-    display: block;
-    height: 100%;
-    font-size: 15px;
-  }
-
-  .top-title {
+  &-title {
     font-size: 50px;
     margin-bottom: 20px;
     line-height: 70px;
@@ -42,7 +22,7 @@ top
     }
   }
 
-  .top-message {
+  &-message {
     font-size: 17px;
     font-weight: bold;
     line-height: 30px;
@@ -53,4 +33,23 @@ top
       line-height: 25px;
     }
   }
+}
+
+.scroll-btn {
+  display: none;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  z-index: 999;
+  border: 2px solid rgb(66, 64, 64);
+  background-color: #ec6d64;
+  border-radius: 5px;
+  padding: 3px 3px 3px 4px;
+  opacity: 0.7;
+}
+
+.scroll-top {
+  display: block;
+  height: 100%;
+  font-size: 15px;
 }
